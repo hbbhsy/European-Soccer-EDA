@@ -18,3 +18,4 @@ Source: Kaggle
 https://www.kaggle.com/hugomathien/soccer
 
 ![](images/teamheatmap.png)
+!['team winning rate']('images/t_wr.png')

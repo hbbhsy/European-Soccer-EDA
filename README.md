@@ -65,7 +65,8 @@ Base on the Match table, I computed the winning rates for each team. And I was c
 
 Using the winning rate, I ranked the top ten and bottom ten teams:
 
-**Top Ten Teams** <br/>
+**Top Ten Teams** 
+
 Ranking | Team
 --------|-----
 1        |FC Barcelona
@@ -80,7 +81,7 @@ Ranking | Team
 10     | RSC Anderlecht
 
 **Bottom Ten Teams**
-<br/>
+
 Ranking | Team
 --------|-----
 296|     SpVgg Greuther Fürth
@@ -99,15 +100,28 @@ As a non soccer fan, I always hear people say that home teams has advantages ove
 ![](images/hwr.png)
 ![](images/awr.png)
 
-$$ H_0: \ p_h = p_a \equiv p$$
+Set my null hypothesis:
+
+![](https://latex.codecogs.com/png.latex?H_%7B0%7D%3A%20%5Cmu_%7Bhome%7D%3D%5Cmu_%7Baway%7D)
+
+![](http://www.sciweavers.org/tex2img.php?eq=<b><i>%24%24%20H%3Csub%3E0%2Fsub%3E%3A%20%5Cmu%3Csub%3Eh%3C%2Fsub%3E%20%3D%20%5Cmu%3Csub%3Ea%3C%2Fsub%3E%20%24%24</i></b>&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
 
 ![](images/diff.png)
+
 ![](images/hawr.png)
 
+I used Welsh's T-test on home winning rates and away winnning rates. 
+
+T-statistic|p-value
+---------|---------
+14.2052|1.832e-39
+
+The p-value is small enough to reject the H<sub>0</sub>. 
 
 
+$$\mu$$
 
-
+![](https://latex.codecogs.com/gif.latex?%24%24%5Cmu%24%24)
 
 
 

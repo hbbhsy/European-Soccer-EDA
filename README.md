@@ -17,5 +17,101 @@ Source: Kaggle
 
 https://www.kaggle.com/hugomathien/soccer
 
-![](images/teamheatmap.png)
-!['team winning rate']('images/t_wr.png')
+### Understanding the data
+
+I begin my EDA by looking at my datasets and try to understand my datasets. My data contains a Country table and a League table. I combined the two table into one. 
+
+Country|	League
+----|---------
+Belgium|Belgium Jupiler League
+England|	England Premier League
+France|France Ligue 1
+Germany	|Germany 1. Bundesliga
+Italy	|Italy Serie A
+Netherlands|	Netherlands Eredivisie
+Poland|	Poland Ekstraklasa
+Portugal|	Portugal Liga ZON Sagres
+Scotland|	Scotland Premier League
+Spain	|Spain LIGA BBVA
+Switzerland	|Switzerland Super League
+
+The match table contains information of every match events from season 2008/2009 to 2015/2016. 
+
+#### Teams
+From the team attribute table, I'm able to look at the correlations between each features and plot the heatmap. The top stronge correlations are shown between the defence pressure and defence team width, defence pressure and defence aggression build up play passing and build up play speed. 
+
+!['team attribute heatmap](images/teamheatmap.png)
+
+Therefore we may say that in order to form a strong defence, a team may wants to design a wider back field squad format.
+
+#### Players
+Same as the team table, I started to look at the players by plot the heatmap.
+
+!['player attribute heatmap](images/playerheatmap.png)
+
+One interesting observation from this heatmap is, for a player, the height and weight shows a strong positve correlation with his strength,but shows negative correlations with most of his features such as balance, acceleration, agility, etc. I then plotted the distributions for the player's height and weight.
+
+!['player weights and heights'](images/wandh.png)
+![](images/wandh_box.png)
+It seems like the two features are normal distributions. 
+
+Does height and weight affect on a player's overall rating? Not obviously.
+
+!['weight vs height'](images/w_h_overall_rating.png)
+
+#### Matches
+Base on the Match table, I computed the winning rates for each team. And I was curious on how the team attributes affect the winning rates.
+!['team winning rate'](images/twr.png)
+
+Using the winning rate, I ranked the top ten and bottom ten teams:
+
+**Top Ten Teams** <br/>
+Ranking | Team
+--------|-----
+1        |FC Barcelona
+2      |Real Madrid CF
+3       |   SL Benfica
+4        |    FC Porto
+5         |     Celtic
+6          |   Rangers
+7    |FC Bayern Munich
+8     |           Ajax
+9      |           PSV
+10     | RSC Anderlecht
+
+**Bottom Ten Teams**
+<br/>
+Ranking | Team
+--------|-----
+296|     SpVgg Greuther Fürth
+295|              Córdoba CF
+294|         AC Arles-Avignon
+293|    DSC Arminia Bielefeld
+292|             FC Dordrecht
+291|     Dunfermline Athletic
+290|             ES Troyes AC
+289|              FC Penafiel
+288 |                 Pescara
+287  |                Reading
+
+### Hypothesis
+As a non soccer fan, I always hear people say that home teams has advantages over away teams. I wonder if that's true for soccer. For each team, I obtained the winning rates when it played as home team and away time. 
+![](images/hwr.png)
+![](images/awr.png)
+
+$$ H_0: \ p_h = p_a \equiv p$$
+
+![](images/diff.png)
+![](images/hawr.png)
+
+
+
+
+
+
+
+
+
+
+
+

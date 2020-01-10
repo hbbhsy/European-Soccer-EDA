@@ -16,3 +16,5 @@ This dataset contains 25k+ matches, players & teams attributes for European Prof
 Source: Kaggle
 
 https://www.kaggle.com/hugomathien/soccer
+
+![](images/teamheatmap.png)
